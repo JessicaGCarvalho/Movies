@@ -10,6 +10,7 @@ const WONDER_WOMAN_POSTER_URL =
 
 export function Movies({ activeTab }) {
   const [movies, setMovies] = useState(discoverMockData);
+  const [currentSearch, setCurrentSearch] = useState("");
 
   useEffect(() => {
     if (activeTab == tabs.DISCOVER) setMovies(discoverMockData)
@@ -23,7 +24,7 @@ export function Movies({ activeTab }) {
       className="movie-container"
     >
       <div className="body-container">
-        <Searchbar />
+        <Searchbar setCurrentSearch={setCurrentSearch} />
         <div className="title-and-movies">
           <div
             className="discover-title"
@@ -34,7 +35,7 @@ export function Movies({ activeTab }) {
 
           <div className="movie-items-container">
             {
-              movies.map(movie => (
+              movies.filter(movie => movie.title.toLowerCase().includes(currentSearch.toLowerCase())).map(movie => (
                 <MovieItem
                   title={movie.title}
                   rating={movie.rating}
