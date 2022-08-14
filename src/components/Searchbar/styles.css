@@ -7,21 +7,23 @@
   padding: 0px 20px;
   height: 70px;
 }
+
 /* applies style to every image in container */
-.searchbar-container > img {
+.searchbar-container>img {
   height: 16px;
   width: 16px;
   filter: invert(100%);
 }
 
-.searchbar-container > input {
+.searchbar-container>input {
   background-color: transparent;
   border: none;
   margin-left: 8px;
   flex-grow: 1;
   font-size: 14px;
 }
-.searchbar-container > input:focus-visible {
+
+.searchbar-container>input:focus-visible {
   outline: none !important;
 }
 

@@ -1,0 +1,16 @@
+.tab-name {
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 12px 12px 24px;
+    cursor: pointer;
+}
+
+.active {
+    background-color: #0C0C0C;
+    color: #2548c6;
+    border-left: 2px solid #2548c6;
+}
+
+.tab-name:hover {
+    background-color: #13181b;
+}
