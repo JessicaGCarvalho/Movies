@@ -1,0 +1,12 @@
+.logobar-container{
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo{
+  height: 40px;
+  object-fit: contain;
+  filter: invert(100%);
+}

@@ -1,0 +1,13 @@
+.movie-container {
+  flex: 5;
+  display: flex;
+}
+
+.movie-items-container {
+  padding: 32px 32px;
+}
+
+.discover-title {
+  padding: 32px 16px 0px 32px; /* top right bottom left */
+  font-size: 20px;
+}
