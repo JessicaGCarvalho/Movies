@@ -2,11 +2,15 @@ import { MovieItem } from "../MovieItem";
 import "./styles.css";
 import { colors } from "../../assets/colors";
 import { Searchbar } from "../Searchbar";
+import { discoverMockData, newReleasesMockData, favoritesMockData } from "../../helpers";
+import { useState } from "react"
 
 const WONDER_WOMAN_POSTER_URL =
   "https://i.ebayimg.com/images/g/k70AAOSwRYpZij1X/s-l500.jpg";
 
 export function Movies({ activeTab }) {
+  const [movies, setMovies] = useState(discoverMockData);
+
   return (
     <div
       style={{ backgroundColor: colors.background }}
@@ -23,61 +27,16 @@ export function Movies({ activeTab }) {
           </div>
 
           <div className="movie-items-container">
-            <MovieItem
-              title="Wonder Woman"
-              rating={4}
-              posterUrl={WONDER_WOMAN_POSTER_URL}
-              movieLength={92}
-            />
-
-            <MovieItem
-              title="Wonder Woman"
-              rating={4}
-              posterUrl={WONDER_WOMAN_POSTER_URL}
-              movieLength={92}
-            />
-
-            <MovieItem
-              title="Wonder Woman"
-              rating={4}
-              posterUrl={WONDER_WOMAN_POSTER_URL}
-              movieLength={92}
-            />
-
-            <MovieItem
-              title="Wonder Woman"
-              rating={4}
-              posterUrl={WONDER_WOMAN_POSTER_URL}
-              movieLength={92}
-            />
-
-            <MovieItem
-              title="Wonder Woman"
-              rating={4}
-              posterUrl={WONDER_WOMAN_POSTER_URL}
-              movieLength={92}
-            />
-
-            <MovieItem
-              title="Wonder Woman"
-              rating={4}
-              posterUrl={WONDER_WOMAN_POSTER_URL}
-              movieLength={92}
-            />
-
-            <MovieItem
-              title="Wonder Woman"
-              rating={4}
-              posterUrl={WONDER_WOMAN_POSTER_URL}
-              movieLength={92}
-            />
-
-            <MovieItem
-              title="Wonder Woman"
-              rating={4}
-              posterUrl={WONDER_WOMAN_POSTER_URL}
-              movieLength={92}
-            />
+            {
+              movies.map(movie => (
+                <MovieItem
+                  title={movie.title}
+                  rating={movie.rating}
+                  posterUrl={movie.posterUrl}
+                  movieLength={movie.movieLength}
+                />
+              ))
+            }
           </div>
         </div>
       </div>

@@ -10,7 +10,7 @@ export default function App() {
   const changeTab = (tab) => {
     setActiveTab(tab)
   }
-  
+
   return (
     <div className="container">
       <Sidebar activeTab={activeTab} changeTab={changeTab} />
