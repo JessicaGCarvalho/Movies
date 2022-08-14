@@ -14,66 +14,68 @@ export function Movies() {
     >
       <div className="body-container">
         <Searchbar />
-        <div className="discover-title" style={{ color: colors.textColor }}>
-          Discover
-        </div>
+        <div className="title-and-movies">
+          <div className="discover-title" style={{ color: colors.textColor }}>
+            Discover
+          </div>
 
-        <div className="movie-items-container">
-          <MovieItem
-            title="Wonder Woman"
-            rating={4}
-            posterUrl={WONDER_WOMAN_POSTER_URL}
-            movieLength={92}
-          />
+          <div className="movie-items-container">
+            <MovieItem
+              title="Wonder Woman"
+              rating={4}
+              posterUrl={WONDER_WOMAN_POSTER_URL}
+              movieLength={92}
+            />
 
-          <MovieItem
-            title="Wonder Woman"
-            rating={4}
-            posterUrl={WONDER_WOMAN_POSTER_URL}
-            movieLength={92}
-          />
+            <MovieItem
+              title="Wonder Woman"
+              rating={4}
+              posterUrl={WONDER_WOMAN_POSTER_URL}
+              movieLength={92}
+            />
 
-          <MovieItem
-            title="Wonder Woman"
-            rating={4}
-            posterUrl={WONDER_WOMAN_POSTER_URL}
-            movieLength={92}
-          />
+            <MovieItem
+              title="Wonder Woman"
+              rating={4}
+              posterUrl={WONDER_WOMAN_POSTER_URL}
+              movieLength={92}
+            />
 
-          <MovieItem
-            title="Wonder Woman"
-            rating={4}
-            posterUrl={WONDER_WOMAN_POSTER_URL}
-            movieLength={92}
-          />
+            <MovieItem
+              title="Wonder Woman"
+              rating={4}
+              posterUrl={WONDER_WOMAN_POSTER_URL}
+              movieLength={92}
+            />
 
-          <MovieItem
-            title="Wonder Woman"
-            rating={4}
-            posterUrl={WONDER_WOMAN_POSTER_URL}
-            movieLength={92}
-          />
+            <MovieItem
+              title="Wonder Woman"
+              rating={4}
+              posterUrl={WONDER_WOMAN_POSTER_URL}
+              movieLength={92}
+            />
 
-          <MovieItem
-            title="Wonder Woman"
-            rating={4}
-            posterUrl={WONDER_WOMAN_POSTER_URL}
-            movieLength={92}
-          />
+            <MovieItem
+              title="Wonder Woman"
+              rating={4}
+              posterUrl={WONDER_WOMAN_POSTER_URL}
+              movieLength={92}
+            />
 
-          <MovieItem
-            title="Wonder Woman"
-            rating={4}
-            posterUrl={WONDER_WOMAN_POSTER_URL}
-            movieLength={92}
-          />
+            <MovieItem
+              title="Wonder Woman"
+              rating={4}
+              posterUrl={WONDER_WOMAN_POSTER_URL}
+              movieLength={92}
+            />
 
-          <MovieItem
-            title="Wonder Woman"
-            rating={4}
-            posterUrl={WONDER_WOMAN_POSTER_URL}
-            movieLength={92}
-          />
+            <MovieItem
+              title="Wonder Woman"
+              rating={4}
+              posterUrl={WONDER_WOMAN_POSTER_URL}
+              movieLength={92}
+            />
+          </div>
         </div>
       </div>
     </div>
