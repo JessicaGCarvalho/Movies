@@ -1,21 +1,36 @@
 import { MovieItem } from "../MovieItem";
 import "./styles.css";
-import { colors } from "../../assets/colors";
 import { Searchbar } from "../Searchbar";
-import { discoverMockData, newReleasesMockData, favoritesMockData, tabs } from "../../helpers";
+import { favoritesMockData, tabs, getMovieData, getNewReleasesDate, today } from "../../helpers";
 import { useState, useEffect } from "react"
 
 const WONDER_WOMAN_POSTER_URL =
   "https://i.ebayimg.com/images/g/k70AAOSwRYpZij1X/s-l500.jpg";
 
 export function Movies({ activeTab }) {
-  const [movies, setMovies] = useState(discoverMockData);
+  const [movies, setMovies] = useState([]);
   const [currentSearch, setCurrentSearch] = useState("");
 
   useEffect(() => {
-    if (activeTab == tabs.DISCOVER) setMovies(discoverMockData)
-    if (activeTab == tabs.NEW_RELEASES) setMovies(newReleasesMockData)
-    if (activeTab == tabs.FAVORITES) setMovies(favoritesMockData)
+    const getMoviesForTab = async (tabReq) => {
+      const response = await getMovieData(tabReq);
+      const movies = response.results.map(movie => (
+        {
+          title: movie.title,
+          rating: movie.vote_average,
+          posterUrl: `https://image.tmdb.org/t/p/w500${movie.poster_path}`,
+          releaseDate: movie.release_date
+        }
+      ));
+      setMovies(movies);
+    }
+    const fetchData = () => {
+      if (activeTab == tabs.DISCOVER) getMoviesForTab()
+      if (activeTab == tabs.NEW_RELEASES) getMoviesForTab(getNewReleasesDate())
+      if (activeTab == tabs.UPCOMING) getMoviesForTab(today);
+      if (activeTab == tabs.FAVORITES) setMovies(favoritesMockData)
+    };
+    fetchData()
   }, [activeTab])
 
   return (
@@ -26,7 +41,7 @@ export function Movies({ activeTab }) {
         <Searchbar setCurrentSearch={setCurrentSearch} />
         <div className="title-and-movies">
           <div
-            className="discover-title"
+            className="page-title"
           >
             {activeTab}
           </div>
@@ -38,7 +53,7 @@ export function Movies({ activeTab }) {
                   title={movie.title}
                   rating={movie.rating}
                   posterUrl={movie.posterUrl}
-                  movieLength={movie.movieLength}
+                  releaseDate={movie.releaseDate}
                 />
               ))
             }

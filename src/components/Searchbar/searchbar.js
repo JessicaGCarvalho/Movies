@@ -6,7 +6,7 @@ const SEARCH_ICON_URL =
 const SETTINGS_ICON_URL =
   "https://icon-library.com/images/white-settings-icon/white-settings-icon-2.jpg";
 const USER_ICON_URL =
-  "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F13%2F2015%2F04%2F05%2Ffeatured.jpg&q=60";
+  "https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg";
 
 export function Searchbar({ setCurrentSearch }) {
   return (

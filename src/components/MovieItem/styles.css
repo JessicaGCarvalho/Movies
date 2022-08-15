@@ -19,4 +19,13 @@
 
 .title {
   font-weight: bold;
+  width: 200px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.title:hover {
+  overflow: visible;
+  white-space: normal;
 }

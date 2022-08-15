@@ -7,7 +7,7 @@ export function MovieItem(props) {
       <div className="title"> {props.title} </div>
       <div className="rating-time-container">
         <span>{props.rating} stars</span>
-        <span>{props.movieLength} min</span>
+        <span>{props.releaseDate}</span>
       </div>
     </div>
   );
