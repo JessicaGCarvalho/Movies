@@ -24,13 +24,10 @@ export function Movies({ activeTab }) {
       ));
       setMovies(movies);
     }
-    const fetchData = () => {
-      if (activeTab == tabs.DISCOVER) getMoviesForTab()
-      if (activeTab == tabs.NEW_RELEASES) getMoviesForTab(getNewReleasesDate())
-      if (activeTab == tabs.UPCOMING) getMoviesForTab(today);
-      if (activeTab == tabs.FAVORITES) setMovies(favoritesMockData)
-    };
-    fetchData()
+    if (activeTab == tabs.DISCOVER) getMoviesForTab()
+    if (activeTab == tabs.NEW_RELEASES) getMoviesForTab(getNewReleasesDate())
+    if (activeTab == tabs.UPCOMING) getMoviesForTab(today);
+    if (activeTab == tabs.FAVORITES) setMovies(favoritesMockData)
   }, [activeTab])
 
   return (

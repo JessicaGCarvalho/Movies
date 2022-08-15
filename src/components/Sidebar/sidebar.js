@@ -9,9 +9,9 @@ export function Sidebar({ activeTab, changeTab }) {
     className="sidebar-container"
   >
     <LogoBar />
-    <TabItem tabName={tabs.DISCOVER} isActive={activeTab == tabs.DISCOVER} onClick={() => changeTab(tabs.DISCOVER)} />
-    <TabItem tabName={tabs.NEW_RELEASES} isActive={activeTab == tabs.NEW_RELEASES} onClick={() => changeTab(tabs.NEW_RELEASES)} />
-    <TabItem tabName={tabs.UPCOMING} isActive={activeTab == tabs.UPCOMING} onClick={() => changeTab(tabs.UPCOMING)} />
-    <TabItem tabName={tabs.FAVORITES} isActive={activeTab == tabs.FAVORITES} onClick={() => changeTab(tabs.FAVORITES)} />
+    <TabItem tabName={tabs.DISCOVER} isActive={activeTab == tabs.DISCOVER} onTabClick={() => changeTab(tabs.DISCOVER)} />
+    <TabItem tabName={tabs.NEW_RELEASES} isActive={activeTab == tabs.NEW_RELEASES} onTabClick={() => changeTab(tabs.NEW_RELEASES)} />
+    <TabItem tabName={tabs.UPCOMING} isActive={activeTab == tabs.UPCOMING} onTabClick={() => changeTab(tabs.UPCOMING)} />
+    <TabItem tabName={tabs.FAVORITES} isActive={activeTab == tabs.FAVORITES} onTabClick={() => changeTab(tabs.FAVORITES)} />
   </div>;
 }
