@@ -11,12 +11,10 @@ const USER_ICON_URL =
 export function Searchbar({ setCurrentSearch }) {
   return (
     <div
-      style={{ backgroundColor: colors.secondary }}
       className="searchbar-container"
     >
       <img src={SEARCH_ICON_URL} />
       <input
-        style={{ color: colors.textColor }}
         placeholder="Search..."
         onChange={(event) => setCurrentSearch(event.target.value)}
       />

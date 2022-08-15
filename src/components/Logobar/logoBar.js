@@ -7,7 +7,6 @@ export function LogoBar() {
   return (
     <div
       className="logobar-container"
-      style={{ backgroundColor: colors.primary }}
     >
       <img src={LOGO_URL} className="logo"></img>
       <div>MEDIA HD</div>

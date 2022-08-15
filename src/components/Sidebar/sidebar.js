@@ -7,7 +7,6 @@ import { tabs } from "../../helpers"
 export function Sidebar({ activeTab, changeTab }) {
   return <div
     className="sidebar-container"
-    style={{ backgroundColor: colors.backgroundSecondary }}
   >
     <LogoBar />
     <TabItem tabName={tabs.DISCOVER} isActive={activeTab == tabs.DISCOVER} onClick={() => changeTab(tabs.DISCOVER)} />

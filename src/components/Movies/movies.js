@@ -20,7 +20,6 @@ export function Movies({ activeTab }) {
 
   return (
     <div
-      style={{ backgroundColor: colors.background }}
       className="movie-container"
     >
       <div className="body-container">
@@ -28,7 +27,6 @@ export function Movies({ activeTab }) {
         <div className="title-and-movies">
           <div
             className="discover-title"
-            style={{ color: colors.textColor }}
           >
             {activeTab}
           </div>

@@ -6,6 +6,7 @@
   align-items: center;
   padding: 0px 20px;
   height: 70px;
+  background-color: var(--secondary);
 }
 
 /* applies style to every image in container */
@@ -21,6 +22,7 @@
   margin-left: 8px;
   flex-grow: 1;
   font-size: 14px;
+  color: var(--text-color);
 }
 
 .searchbar-container>input:focus-visible {
@@ -28,7 +30,7 @@
 }
 
 ::placeholder {
-  color: rgb(130, 170, 215);
+  color: var(--search-placeholder-color);
 }
 
 .settings-icon {
@@ -50,5 +52,6 @@
 
 .settings-icon:hover {
   background-color: #dab739;
+  /* inverse of secondary-color */
   border-radius: 5px;
 }

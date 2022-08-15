@@ -3,11 +3,22 @@
 .container {
   display: flex;
 }
+
 body {
   margin: 0px;
 }
 
 div {
-  color: white;
+  color: var(--text-color);
   font-family: "Montserrat", sans-serif;
+}
+
+:root {
+  --primary: #2548c6;
+  --secondary: #3a53d4;
+  --background: #13181b;
+  --background-secondary: #1a1d22;
+  --text-color: #ffffff;
+  --active-color: #0C0C0C;
+  --search-placeholder-color: rgb(130, 170, 215);
 }

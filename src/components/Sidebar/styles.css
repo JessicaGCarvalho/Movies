@@ -1,3 +1,4 @@
 .sidebar-container {
   flex: 1;
+  background-color: var(--background-secondary);
 }

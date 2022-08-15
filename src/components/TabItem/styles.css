@@ -6,11 +6,11 @@
 }
 
 .active {
-    background-color: #0C0C0C;
-    color: #2548c6;
-    border-left: 2px solid #2548c6;
+    background-color: var(--active-color);
+    color: var(--primary);
+    border-left: 2px solid var(--primary);
 }
 
 .tab-name:hover {
-    background-color: #13181b;
+    background-color: var(--background);
 }
