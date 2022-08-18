@@ -8,14 +8,17 @@ export function MovieItem(props) {
       <img className="poster" src={props.posterUrl} alt="Wonder Woman poster" />
       <div className="title"> {props.title} </div>
       <div className="rating-time-container">
-        <Rating
-          initialValue={props.rating / 2}
-          readonly
-          size={12}
-          fullClassName="rating-full-stars"
-          emptyClassName="rating-empty-stars"
-        />
         <span>{props.releaseDate}</span>
+        {
+          props.displayRating &&
+          <Rating
+            initialValue={props.rating / 2}
+            readonly
+            size={12}
+            fullClassName="rating-full-stars"
+            emptyClassName="rating-empty-stars"
+          />
+        }
       </div>
     </div>
   );
