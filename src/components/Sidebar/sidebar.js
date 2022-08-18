@@ -1,6 +1,5 @@
 import "./styles.css"
 import { LogoBar } from "../Logobar";
-import { colors } from "../../assets/colors"
 import { TabItem } from "../TabItem";
 import { tabs } from "../../helpers"
 

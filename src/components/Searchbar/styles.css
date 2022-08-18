@@ -9,13 +9,6 @@
   background-color: var(--secondary);
 }
 
-/* applies style to every image in container */
-.searchbar-container>img {
-  height: 16px;
-  width: 16px;
-  filter: invert(100%);
-}
-
 .searchbar-container>input {
   background-color: transparent;
   border: none;
@@ -29,29 +22,34 @@
   outline: none !important;
 }
 
+.search-icon {
+  color: var(--search-font-color);
+  display: flex;
+  justify-content: center;
+}
+
 ::placeholder {
-  color: var(--search-placeholder-color);
+  color: var(--search-font-color);
 }
 
 .settings-icon {
-  height: 24px !important;
-  width: 24px !important;
-  cursor: pointer;
+  color: var(--search-font-color);
   padding: 8px;
-}
-
-.user-icon {
-  height: 40px !important;
-  width: 40px !important;
-  border-radius: 20px;
-  object-fit: cover;
-  filter: none !important;
+  display: flex;
+  justify-content: center;
   cursor: pointer;
-  margin: 0px 16px 0px 8px;
 }
 
 .settings-icon:hover {
-  background-color: #dab739;
-  /* inverse of secondary-color */
+  background-color: var(--primary);
   border-radius: 5px;
+}
+
+
+.user-icon {
+  height: 36px !important;
+  width: 36px !important;
+  border-radius: 18px;
+  cursor: pointer;
+  margin: 0px 16px 0px 8px;
 }

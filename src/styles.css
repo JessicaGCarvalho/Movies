@@ -20,5 +20,5 @@ div {
   --background-secondary: #1a1d22;
   --text-color: #ffffff;
   --active-color: #0C0C0C;
-  --search-placeholder-color: rgb(130, 170, 215);
+  --search-font-color: rgb(130, 170, 215);
 }

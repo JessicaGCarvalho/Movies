@@ -29,3 +29,18 @@
   overflow: visible;
   white-space: normal;
 }
+
+.rating-full-stars {
+  color: var(--secondary) !important;
+}
+
+.rating-empty-stars {
+  color: transparent !important;
+}
+
+.rating-empty-stars>svg>path {
+  fill: none;
+  stroke: var(--primary);
+  stroke-width: 1px;
+  stroke-linejoin: round;
+}

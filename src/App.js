@@ -4,6 +4,7 @@ import { Sidebar } from "./components/Sidebar";
 import { Movies } from "./components/Movies";
 import { tabs } from "./helpers";
 
+
 export default function App() {
   const [activeTab, setActiveTab] = useState(tabs.DISCOVER)
 
