@@ -1,8 +1,11 @@
-.tab-name {
+.tab-container {
+    display: flex;
+    align-items: center;
     font-size: 12px;
     font-weight: bold;
     padding: 12px 12px 12px 24px;
     cursor: pointer;
+    border-left: 2px solid transparent;
 }
 
 .active {
@@ -11,6 +14,6 @@
     border-left: 2px solid var(--primary);
 }
 
-.tab-name:hover {
+.tab-container:hover {
     background-color: var(--background);
 }

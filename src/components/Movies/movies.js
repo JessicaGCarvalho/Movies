@@ -24,10 +24,10 @@ export function Movies({ activeTab }) {
       ));
       setMovies(movies);
     }
-    if (activeTab === tabs.DISCOVER) getMoviesForTab()
-    if (activeTab === tabs.NEW_RELEASES) getMoviesForTab(getNewReleasesDate())
+    if (activeTab === tabs.DISCOVER) getMoviesForTab();
+    if (activeTab === tabs.NEW_RELEASES) getMoviesForTab(getNewReleasesDate());
     if (activeTab === tabs.UPCOMING) getMoviesForTab(today);
-    if (activeTab === tabs.FAVORITES) setMovies(favoritesMockData)
+    if (activeTab === tabs.FAVORITES) setMovies(favoritesMockData);
   }, [activeTab])
 
   return (

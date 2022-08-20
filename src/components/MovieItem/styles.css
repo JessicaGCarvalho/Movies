@@ -3,6 +3,7 @@
   margin-right: 24px;
   cursor: pointer;
   padding-bottom: 40px;
+  position: relative;
 }
 
 .rating-time-container {
@@ -10,11 +11,41 @@
   justify-content: space-between;
 }
 
+.poster-container {
+  background-color: red;
+}
+
 .poster {
   margin: 16px 0px 8px;
   height: 300px;
   width: 200px;
   border-radius: 10px;
+}
+
+.poster:hover+.stack-top {
+  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--hover-poster);
+}
+
+.stack-top {
+  background-color: var(--hover-poster);
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.favorites-icon {
+  color: var(--primary);
+  background-color: var(--text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  border-radius: 100%;
 }
 
 .title {
