@@ -10,6 +10,7 @@ const WONDER_WOMAN_POSTER_URL =
 export function Movies({ activeTab }) {
   const [movies, setMovies] = useState([]);
   const [currentSearch, setCurrentSearch] = useState("");
+  const [favorites, setFavorites] = useState([]);
 
   useEffect(() => {
     const getMoviesForTab = async (tabReq) => {
@@ -27,7 +28,7 @@ export function Movies({ activeTab }) {
     if (activeTab === tabs.DISCOVER) getMoviesForTab();
     if (activeTab === tabs.NEW_RELEASES) getMoviesForTab(getNewReleasesDate());
     if (activeTab === tabs.UPCOMING) getMoviesForTab(today);
-    if (activeTab === tabs.FAVORITES) setMovies(favoritesMockData);
+    if (activeTab === tabs.FAVORITES) setMovies(favorites);
   }, [activeTab])
 
   return (
@@ -52,6 +53,12 @@ export function Movies({ activeTab }) {
                   posterUrl={movie.posterUrl}
                   releaseDate={movie.releaseDate}
                   displayRating={activeTab !== tabs.UPCOMING}
+                  favorites={favorites}
+                  setFavorites={setFavorites}
+                // onHeartClick={() => {
+                //   setFavorites.push(props);
+                //   isLiked = true;
+                // }}
                 />
               ))
             }

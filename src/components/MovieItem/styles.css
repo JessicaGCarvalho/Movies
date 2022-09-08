@@ -9,10 +9,7 @@
 .rating-time-container {
   display: flex;
   justify-content: space-between;
-}
-
-.poster-container {
-  background-color: red;
+  font-size: 12px;
 }
 
 .poster {
@@ -49,6 +46,7 @@
 }
 
 .title {
+  font-size: 16px;
   font-weight: bold;
   width: 200px;
   text-overflow: ellipsis;
