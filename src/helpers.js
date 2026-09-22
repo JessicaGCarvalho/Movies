@@ -1,5 +1,5 @@
 import axios from "axios";
-import { API_KEY } from "./secrets";
+const API_KEY = process.env.REACT_APP_TMDB_API_KEY;
 
 export const tabs = {
     DISCOVER: 'Discover',
@@ -59,12 +59,13 @@ export const getNewReleasesDate = () => {
 export const today = formatDate(new Date());
 
 export const getMovieData = async (releaseDate) => {
+    if (!API_KEY) return { results: [] };
     let baseUrl = `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}`
     if (releaseDate) baseUrl += `&primary_release_date.gte=${releaseDate}`
     try {
         const response = await axios.get(baseUrl)
         return response.data;
     } catch {
-        return [];
+        return { results: [] };
     }
 }
